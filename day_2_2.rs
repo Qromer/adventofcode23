@@ -15,9 +15,7 @@ fn main() {
 
     for line in input.lines() {
         let mut round = Round { red: 0, green: 0, blue: 0};
-        let line = line.trim_start_matches("Game ")
-        .trim_start_matches(char::is_numeric)
-        .trim_start_matches(": ");
+        let line = line.trim_start_matches("Game ").trim_start_matches(char::is_numeric).trim_start_matches(": ");
         let rounds = line.split("; ");
         
         for turn in rounds {
